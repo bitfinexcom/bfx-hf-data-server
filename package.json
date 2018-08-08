@@ -6,13 +6,40 @@
   "directories": {
     "lib": "lib"
   },
-  "author": "Cris Mihalache <cris.m@bitfinex.com>",
-  "license": "",
+  "author": "Cris Mihalache <cris.m@bitfinex.com> (https://www.bitfinex.com)",
+  "license": "Apache-2.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitfinexcom/bfx-hf-data-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bitfinexcom/bfx-hf-data-server/issues"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "NODE_ENV=test istanbul cover _mocha -- -R spec -b --recursive",
+    "test-without-coverage": "NODE_ENV=test mocha -R spec -b --recursive",
+    "start": "node examples/server.js"
+  },
+  "keywords": [
+    "honey framework",
+    "bitfinex",
+    "bitcoin",
+    "BTC"
+  ],
   "dependencies": {
-    "lodash": "^4.17.10"
+    "bitfinex-api-node": "^2.0.0-beta.1",
+    "knex": "^0.15.2",
+    "lodash": "^4.17.10",
+    "objection": "^1.2.2",
+    "p-iteration": "^1.1.7",
+    "sqlite3": "^4.0.2"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "dotenv": "^6.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-standard": "^7.0.0",
@@ -22,6 +49,9 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.0.1",
     "faucet": "^0.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "socks-proxy-agent": "^4.0.1",
     "tape": "^4.6.3",
     "tape-watch": "^2.3.0",
     "webpack": "^2.4.1",
