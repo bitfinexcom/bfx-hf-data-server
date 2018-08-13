@@ -25,7 +25,6 @@ const run = async () => {
   const ds = startDataServer({
     candles: true,
     trades: true,
-    syncOnDemand: true,
     port: 8899,
     rest
   })
