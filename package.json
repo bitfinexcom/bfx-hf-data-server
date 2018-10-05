@@ -30,6 +30,8 @@
     "BTC"
   ],
   "dependencies": {
+    "bfx-hf-db": "bitfinexcom/bfx-hf-db",
+    "bfx-hf-util": "bitfinexcom/bfx-hf-util",
     "bitfinex-api-node": "^2.0.0-beta.1",
     "knex": "^0.15.2",
     "lodash": "^4.17.10",
