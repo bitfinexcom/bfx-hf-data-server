@@ -2,15 +2,12 @@
 
 [![Build Status](https://travis-ci.org/bitfinexcom/bfx-hf-data-server.svg?branch=master)](https://travis-ci.org/bitfinexcom/bfx-hf-data-server)
 
-The HF data server exposes a websocket interface for querying trade/candle data from Bitfinex, and syncronizes that data in a local DB. To use, populate `.env` with your connection details:
+The HF data server exposes a websocket interface for querying trade/candle data from Bitfinex, and syncronizes that data in a local DB. To use, populate `.env` with your database details:
 
 ```
 // .env
 DB_ENV=development
 DEV_DB_FN=db/dev.sql
-
-API_KEY=...
-API_SECRET=...
 ```
 
 Then prepare the database and start the server:
