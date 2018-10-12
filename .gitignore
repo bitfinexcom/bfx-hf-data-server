@@ -9,3 +9,5 @@ npm-debug.log
 db/*.sql
 .env
 scripts/*
+!db/.keep
+db/*
