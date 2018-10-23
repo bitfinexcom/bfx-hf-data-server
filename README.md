@@ -2,26 +2,17 @@
 
 [![Build Status](https://travis-ci.org/bitfinexcom/bfx-hf-data-server.svg?branch=master)](https://travis-ci.org/bitfinexcom/bfx-hf-data-server)
 
-The HF data server exposes a websocket interface for querying trade/candle data from Bitfinex, and syncronizes that data in a local DB. To use, populate `.env` with your database details:
+The HF data server exposes a websocket interface for querying trade/candle data from Bitfinex, and syncronizes that data in a local DB.
 
-```
-// .env
-DB_ENV=development
-DEV_DB_FN=db/dev.sql
-```
-
-Then prepare the database and start the server:
-
-`knex migrate:latest`
-`npm start`
+To run, use `npm start`
 
 ## Initialization
 
-To use, start a data server instance using `lib/start`:
+Start a data server instance using `lib/start`:
 
 ```js
 const { RESTv2 } = require('bfx-api-node-rest')
-const { auditDB, logDataDBInfo, startDataServer } = require('bfx-hf-data-server')
+const { logDataDBInfo, startDataServer } = require('bfx-hf-data-server')
 
 const run = async () => {
   const rest = new RESTv2(...) // create a REST API interface for fetching data
@@ -30,7 +21,6 @@ const run = async () => {
     rest
   })
 
-  await auditDB(ds)
   await logDataDBInfo()
 }
 
