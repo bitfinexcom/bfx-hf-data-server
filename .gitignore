@@ -11,3 +11,4 @@ db/*.sql
 scripts/*
 !db/.keep
 db/*
+package-lock.json
