@@ -1,6 +1,6 @@
 {
   "name": "bfx-hf-data-server",
-  "version": "1.0.0-alpha",
+  "version": "1.0.1",
   "description": "HF data server module",
   "main": "index.js",
   "directories": {
@@ -29,7 +29,7 @@
     "BTC"
   ],
   "dependencies": {
-    "bfx-hf-models": "^1.0.0",
+    "bfx-hf-models": "^2.0.0",
     "bfx-hf-util": "^1.0.0",
     "bitfinex-api-node": "^2.0.0",
     "knex": "^0.15.2",
