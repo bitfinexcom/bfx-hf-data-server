@@ -33,10 +33,7 @@
     "bfx-hf-util": "^1.0.0",
     "bitfinex-api-node": "^2.0.0",
     "knex": "^0.15.2",
-    "lodash": "^4.17.10",
-    "objection": "^1.2.2",
-    "p-iteration": "^1.1.7",
-    "sqlite3": "^4.0.2"
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
