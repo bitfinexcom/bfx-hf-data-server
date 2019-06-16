@@ -12,6 +12,7 @@ const { schema: HFDBBitfinexSchema } = require('bfx-hf-ext-plugin-bitfinex')
 const DataServer = require('../lib/server')
 
 const { DB_FILENAME } = process.env
+
 const db = new HFDB({
   schema: HFDBBitfinexSchema,
   adapter: HFDBLowDBAdapter({
