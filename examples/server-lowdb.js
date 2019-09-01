@@ -21,7 +21,9 @@ const db = new HFDB({
   })
 })
 
-new DataServer({
+const ds = new DataServer({
   port: 8899,
   db,
 })
+
+ds.open()
