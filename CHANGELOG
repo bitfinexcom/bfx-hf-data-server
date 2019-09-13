@@ -1,0 +1,34 @@
+# 1.3.0
+- manifest: bump deps
+- meta: add github issue/pr templates
+- meta: standardize travis config
+- meta: add placeholder npm test
+- meta: add changelog
+- refactor: manual call to open() now required to start wss server
+
+# 1.2.1
+- refactor: move socket open logic out of DataServer constructor
+- fix: throw error on redundant socket close
+
+# 1.2.0
+- refactor: do not send market data on initial connect
+- refactor: send version number on initial connect
+
+# 1.1.0
+- refactor: buffer bfx proxy prior to socket open
+- refactor: update to use new bfx-hf-models API
+- refactor: update to accept new exchange field on exec.bt command
+- feature: split start commands into lowdb & sql variants
+- feature: optimize candle sync logic by taking active syncs into account
+- feature: add meta field to get.candles call for custom client data
+
+# 1.0.0
+- fix: exec.bt cmd trade key access typo
+- feature: add bfx API proxy support
+- refactor: move logic into DataServer class
+- refactor: switch from bfx-hf-db to bfx-hf-models
+- manfiest: rm private flag
+- meta: rm knexfile.js
+
+# 1.0.0-alpha
+- initial version
