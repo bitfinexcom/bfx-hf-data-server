@@ -8,7 +8,6 @@ require('dotenv').config()
 const HFDB = require('bfx-hf-models')
 const HFDBSQLAdapter = require('bfx-hf-models-adapter-sql')
 const { schema: HFDBBitfinexSchema } = require('bfx-hf-ext-plugin-bitfinex')
-
 const DataServer = require('../lib/server')
 
 const { PSQL_CONNECTION } = process.env
@@ -23,7 +22,7 @@ const db = new HFDB({
 
 const ds = new DataServer({
   port: 8899,
-  db,
+  db
 })
 
 ds.open()
