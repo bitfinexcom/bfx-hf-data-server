@@ -1,4 +1,4 @@
-## HF Data Server
+## Bitfinex Honey Framework Data Server for Node.JS
 
 [![Build Status](https://travis-ci.org/bitfinexcom/bfx-hf-data-server.svg?branch=master)](https://travis-ci.org/bitfinexcom/bfx-hf-data-server)
 
@@ -10,11 +10,35 @@ The DB backend is implemented by a plugin, currently the following are available
 
 Regardless of the backend, a schema must be specified (providing exchange-specific API methods). The official Bitfinex schema is [bfx-hf-ext-plugin-bitfinex](https://github.com/bitfinexcom/bfx-hf-models-adapter-sql).
 
-To run, use `npm start-lowdb` or `npm start-sql`
+### Installation
 
-## Initialization
+For standalone usage:
+```bash
+git clone https://github.com/bitfinexcom/bfx-hf-data-server
+cd bfx-hf-data-server
+npm i
 
-Create a `bfx-hf-models` DB instance and pass it to the data server constructor:
+cp .env.example .env
+
+npm run start-lowdb
+```
+
+For usage/extension within an existing project:
+```bash
+npm i --save bfx-hf-data-server
+```
+
+### Quickstart
+
+Follow the installation instructions, and run either `npm run start-lowdb` or `npm run start-sql` depending on your selected DB backend. Be sure the required `DB_FILENAME` or `PSQL_CONNECTION` strings are present in `.env` (see `.env.example`).
+
+### Docs
+
+See `docs/ws_api.md` for WebSocket API commands/packets, and `docs/server.md` for JSDoc-generated server class API docmentation.
+
+For executable examples, refer to `examples/`
+
+### Example
 
 ```js
 const DataServer = require('bfx-hf-data-server')
@@ -36,30 +60,14 @@ const ds = new DataServer({
 })
 
 ds.open()
+
+// data server ready to receive commands
 ```
 
-Then connect to the command port number (`8899` in the above example) and request a backtest by sending an 'exec.bt' command:
+### Contributing
 
-```js
-['exec.bt', [
-  exchange,  // exchange to pull data from, requires matching adapter
-  from,      // start timestamp
-  to,        // end timestamp
-  symbol,    // i.e. 'tBTCUSD'
-  timeFrame, // i.e. '1m'
-  candles,   // true or false
-  trades,    // true or false
-  sync       // true or false, whether to sync missing data
-]]
-```
-
-If not all requested data is available locally, the server will first syncronize it before initiating the backtest data stream. In all, the server will reply with any of the following packets:
-
-* `['data.sync.start', exchange, symbol, timeFrame, from, to, meta]` - when a sync process starts
-* `['data.sync.end', exchange, symbol, timeFrame, from, to, meta]` - when a sync process end
-* `['bt.start', null, null, from, to, null, nTrades, nCandles]` - before the backtest data stream
-* `['bt.end', null, null, from, to]` - after the backtest data stream
-* `['bt.candle', null, null, candle]` - individual BT candle
-* `['bt.trade', null, trade]` - individual BT trade
-
-Candles are of the form `{ symbol, open, high, low, close, volume, mts }`, and trades `{ id, symbol, amount, price }`.
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
