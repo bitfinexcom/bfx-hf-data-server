@@ -34,9 +34,9 @@ Follow the installation instructions, and run either `npm run start-lowdb` or `n
 
 ### Docs
 
-See `docs/ws_api.md` for WebSocket API commands/packets, and `docs/server.md` for JSDoc-generated server class API docmentation.
+[See `docs/ws_api.md`](/docs/ws_api.md) for WebSocket API commands/packets, and [`docs/server.md`](/docs/server.md) for JSDoc-generated server class API docmentation.
 
-For executable examples, refer to `examples/`
+For executable examples, [refer to `examples/`](/examples)
 
 ### Example
 
