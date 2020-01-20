@@ -1,3 +1,6 @@
+# 1.3.4
+- fix: further sync key refactoring
+
 # 1.3.3
 - fix: sync key parsing and reporting
 
