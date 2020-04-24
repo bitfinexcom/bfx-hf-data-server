@@ -13,10 +13,10 @@ After opening a websocket connection to a running `bfx-hf-data-server` instance,
 #### `exec.bt` response packets
 * `['data.sync.start', exchange, symbol, timeFrame, from, to, meta]` - when a sync process starts
 * `['data.sync.end', exchange, symbol, timeFrame, from, to, meta]` - when a sync process end
-* `['bt.start', null, null, from, to, null, nTrades, nCandles]` - before the backtest data stream
-* `['bt.end', null, null, from, to]` - after the backtest data stream
-* `['bt.candle', null, null, candle]` - individual BT candle
-* `['bt.trade', null, trade]` - individual BT trade
+* `['bt.start', null, null, from, to, null, nTrades, nCandles, meta]` - before the backtest data stream
+* `['bt.end', null, null, from, to, meta]` - after the backtest data stream
+* `['bt.candle', null, null, candle, meta]` - individual BT candle
+* `['bt.trade', null, trade, meta]` - individual BT trade
 
 #### `get.bts` response packets
 * `['data.bts', bts]`
