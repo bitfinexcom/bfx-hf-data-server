@@ -1,3 +1,6 @@
+# 1.4.0
+- feature: adds meta field to exec.bt command
+
 # 1.3.5
 - meta: bump bitfinex-api-node to v4
 
