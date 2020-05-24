@@ -12,3 +12,4 @@ scripts/*
 !db/.keep
 db/*
 package-lock.json
+tags
