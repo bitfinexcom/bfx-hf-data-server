@@ -1,3 +1,8 @@
+# 1.4.1
+- meta: bump deps
+- meta: normalize eslint config
+- refactor: improve doclets
+
 # 1.4.0
 - feature: adds meta field to exec.bt command
 

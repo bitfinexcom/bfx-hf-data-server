@@ -2,17 +2,22 @@
 
 [![Build Status](https://travis-ci.org/bitfinexcom/bfx-hf-data-server.svg?branch=master)](https://travis-ci.org/bitfinexcom/bfx-hf-data-server)
 
-The HF data server exposes a websocket interface for querying trade/candle data from Bitfinex, and syncronizes that data in a local DB.
+The HF data server exposes a websocket interface for querying trade/candle data
+from Bitfinex, and syncronizes that data in a local DB.
 
 The DB backend is implemented by a plugin, currently the following are available:
+
 * [bfx-hf-models-adapter-sql](https://github.com/bitfinexcom/bfx-hf-models-adapter-sql)
 * [bfx-hf-models-adapter-lowdb](https://github.com/bitfinexcom/bfx-hf-models-adapter-lowdb)
 
-Regardless of the backend, a schema must be specified (providing exchange-specific API methods). The official Bitfinex schema is [bfx-hf-ext-plugin-bitfinex](https://github.com/bitfinexcom/bfx-hf-models-adapter-sql).
+Regardless of the backend, a schema must be specified (providing
+exchange-specific API methods). The official Bitfinex schema is
+[bfx-hf-ext-plugin-bitfinex](https://github.com/bitfinexcom/bfx-hf-models-adapter-sql).
 
 ### Installation
 
 For standalone usage:
+
 ```bash
 git clone https://github.com/bitfinexcom/bfx-hf-data-server
 cd bfx-hf-data-server
@@ -24,19 +29,25 @@ npm run start-lowdb
 ```
 
 For usage/extension within an existing project:
+
 ```bash
 npm i --save bfx-hf-data-server
 ```
 
 ### Quickstart
 
-Follow the installation instructions, and run either `npm run start-lowdb` or `npm run start-sql` depending on your selected DB backend. Be sure the required `DB_FILENAME` or `PSQL_CONNECTION` strings are present in `.env` (see `.env.example`).
+Follow the installation instructions, and run either `npm run start-lowdb` or
+`npm run start-sql` depending on your selected DB backend. Be sure the required
+`DB_FILENAME` or `PSQL_CONNECTION` strings are present in `.env` (see
+`.env.example`).
 
 ### Docs
 
-[See `docs/ws_api.md`](/docs/ws_api.md) for WebSocket API commands/packets, and [`docs/server.md`](/docs/server.md) for JSDoc-generated server class API docmentation.
+API documentation can be found in [`docs/reference.md`](docs/reference.md), and
+examples in the [`examples`](examples) folder.
 
-For executable examples, [refer to `examples/`](/examples)
+A list of WebSocket API commands can be found at
+[`docs/ws_api.md`](docs/ws_api.md).
 
 ### Example
 
