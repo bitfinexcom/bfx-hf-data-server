@@ -12,3 +12,6 @@ scripts/*
 !db/.keep
 db/*
 package-lock.json
+tags
+.nyc_output
+coverage
