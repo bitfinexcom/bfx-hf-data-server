@@ -1,3 +1,6 @@
+' 1.4.1
+- feature: added support for server side backtesting
+
 # 1.4.0
 - feature: adds meta field to exec.bt command
 
