@@ -43,15 +43,21 @@
     "bfx-hf-strategy": "^1.0.4",
     "bfx-hf-util": "^1.0.1",
     "bitfinex-api-node": "^4.0.0",
+    "bitfinex-terminal-key-encoding": "^1.1.0",
+    "dazaar": "^1.4.0",
+    "hyperbee": "0.0.18",
     "knex": "^0.19.5",
     "lodash": "^4.17.10",
-    "mathjs": "^7.1.0"
+    "mathjs": "^7.1.0",
+    "random-access-memory": "^3.1.1",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "bfx-hf-ext-plugin-bitfinex": "^1.0.0",
     "bfx-hf-models-adapter-lowdb": "^1.0.0",
     "bfx-hf-models-adapter-sql": "^1.0.0",
+    "bitfinex-terminal-terms-of-use": "^1.0.0",
     "chai": "^4.2.0",
     "dotenv": "^6.2.0",
     "eslint": "^4.19.1",

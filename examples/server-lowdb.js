@@ -5,6 +5,8 @@ process.env.DEBUG = 'bfx:hf:*'
 require('bfx-hf-util/lib/catch_uncaught_errors')
 require('dotenv').config()
 
+const os = require('os')
+
 const HFDB = require('bfx-hf-models')
 const HFDBLowDBAdapter = require('bfx-hf-models-adapter-lowdb')
 const { schema: HFDBBitfinexSchema } = require('bfx-hf-ext-plugin-bitfinex')
@@ -20,9 +22,11 @@ const db = new HFDB({
   })
 })
 
+const dir = `${os.homedir()}/.honeyframework`
 const ds = new DataServer({
   port: 8899,
-  db
+  db,
+  dir
 })
 
 ds.open()
