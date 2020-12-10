@@ -6,18 +6,19 @@ require('bfx-hf-util/lib/catch_uncaught_errors')
 require('dotenv').config()
 
 const os = require('os')
+const path = require('path')
 
 const HFDB = require('bfx-hf-models')
 const HFDBLowDBAdapter = require('bfx-hf-models-adapter-lowdb')
 const { schema: HFDBBitfinexSchema } = require('bfx-hf-ext-plugin-bitfinex')
 const DataServer = require('../lib/server')
 
-const { DB_FILENAME } = process.env
+const { DB_FILENAME = 'dbtest' } = process.env
 
 const db = new HFDB({
   schema: HFDBBitfinexSchema,
   adapter: HFDBLowDBAdapter({
-    dbPath: `${__dirname}/../${DB_FILENAME}`,
+    dbPath: path.join(__dirname, '..', DB_FILENAME),
     schema: HFDBBitfinexSchema
   })
 })
