@@ -23,7 +23,7 @@ const db = new HFDB({
   })
 })
 
-const dir = `${os.homedir()}/.honeyframework`
+const dir = path.join(os.homedir(), '.honeyframework')
 const ds = new DataServer({
   port: 8899,
   db,
