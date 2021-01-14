@@ -1,4 +1,10 @@
-' 1.4.1
+# 2.0.0
+ - use new backtesting lib, fix memory leak, do not simulate trades for candles
+
+# 1.5.0
+ - allow different sources for backtesting
+
+# 1.4.1
 - feature: added support for server side backtesting
 
 # 1.4.0
