@@ -1,5 +1,7 @@
 'use strict'
 
+const path = require('path')
+
 process.env.DEBUG = 'bfx:hf:*'
 
 require('bfx-hf-util/lib/catch_uncaught_errors')
@@ -10,12 +12,12 @@ const HFDBLowDBAdapter = require('bfx-hf-models-adapter-lowdb')
 const { schema: HFDBBitfinexSchema } = require('bfx-hf-ext-plugin-bitfinex')
 const DataServer = require('../lib/server')
 
-const { DB_FILENAME } = process.env
+const { DB_FILENAME = 'test-db.json' } = process.env
 
 const db = new HFDB({
   schema: HFDBBitfinexSchema,
   adapter: HFDBLowDBAdapter({
-    dbPath: `${__dirname}/../${DB_FILENAME}`,
+    dbPath: path.join(__dirname, '..', DB_FILENAME),
     schema: HFDBBitfinexSchema
   })
 })
