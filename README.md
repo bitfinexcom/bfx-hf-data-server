@@ -4,8 +4,7 @@
 
 The HF data server exposes a websocket interface for querying trade/candle data from Bitfinex, and syncronizes that data in a local DB.
 
-The DB backend is implemented by a plugin, currently the following are available:
-* [bfx-hf-models-adapter-sql](https://github.com/bitfinexcom/bfx-hf-models-adapter-sql)
+The DB backend is implemented by a plugin:
 * [bfx-hf-models-adapter-lowdb](https://github.com/bitfinexcom/bfx-hf-models-adapter-lowdb)
 
 Regardless of the backend, a schema must be specified (providing exchange-specific API methods). The official Bitfinex schema is [bfx-hf-ext-plugin-bitfinex](https://github.com/bitfinexcom/bfx-hf-models-adapter-sql).

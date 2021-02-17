@@ -53,7 +53,6 @@
   "devDependencies": {
     "bfx-hf-ext-plugin-bitfinex": "^1.0.0",
     "bfx-hf-models-adapter-lowdb": "^1.0.0",
-    "bfx-hf-models-adapter-sql": "^1.0.0",
     "dotenv": "^6.2.0",
     "jsdoc-to-markdown": "^5.0.1",
     "mocha": "^6.2.0",
