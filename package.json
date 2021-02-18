@@ -25,7 +25,6 @@
     "lint": "standard",
     "test": "npm run lint && npm run unit",
     "unit": "NODE_ENV=test mocha -R spec -b --recursive",
-    "start-sql": "node examples/server-sql.js",
     "start-lowdb": "node examples/server-lowdb.js",
     "server_docs": "node_modules/jsdoc-to-markdown/bin/cli.js lib/server.js > docs/server.md",
     "docs": "npm run server_docs"
