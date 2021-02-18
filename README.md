@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bitfinexcom/bfx-hf-data-server.svg?branch=master)](https://travis-ci.org/bitfinexcom/bfx-hf-data-server)
 
-The HF data server exposes a websocket interface for querying trade/candle data from Bitfinex, and syncronizes that data in a local DB.
+The HF data server runs backtests for the HF UI Electron App. It syncs candle and trade data and then executes the strategy on it for backtesting.
 
 The DB backend is implemented by a plugin:
 * [bfx-hf-models-adapter-lowdb](https://github.com/bitfinexcom/bfx-hf-models-adapter-lowdb)
