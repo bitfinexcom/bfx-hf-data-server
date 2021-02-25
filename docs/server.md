@@ -1,12 +1,10 @@
 <a name="DataServer"></a>
 
 ## DataServer
-Honey Framework Data Server
-
 **Kind**: global class  
 
 * [DataServer](#DataServer)
-    * [new DataServer(args, db, apiKey, apiSecret, agent, wsURL, restURL, transform, proxy, port)](#new_DataServer_new)
+    * [new DataServer(args, db, port)](#new_DataServer_new)
     * [.open()](#DataServer+open)
     * [.close()](#DataServer+close)
     * [.getRunningSyncRanges()](#DataServer+getRunningSyncRanges) ⇒ <code>Array.&lt;Object&gt;</code>
@@ -18,19 +16,12 @@ Honey Framework Data Server
 
 <a name="new_DataServer_new"></a>
 
-### new DataServer(args, db, apiKey, apiSecret, agent, wsURL, restURL, transform, proxy, port)
+### new DataServer(args, db, port)
 
 | Param | Type | Description |
 | --- | --- | --- |
 | args | <code>Object</code> |  |
 | db | <code>Object</code> | bfx-hf-models DB instance |
-| apiKey | <code>string</code> | for bfx proxy |
-| apiSecret | <code>string</code> | for bfx proxy |
-| agent | <code>Object</code> | optional proxy agent for bfx proxy connection |
-| wsURL | <code>string</code> | bitfinex websocket API URL |
-| restURL | <code>string</code> | bitfinex RESTv2 API URL |
-| transform | <code>boolean</code> | for bfx proxy |
-| proxy | <code>boolean</code> | if true, a bfx proxy will be opened for every client |
 | port | <code>number</code> | websocket server port |
 
 <a name="DataServer+open"></a>
@@ -48,7 +39,7 @@ Closes the WebSocket API server; throws an error if it is not open
 <a name="DataServer+getRunningSyncRanges"></a>
 
 ### dataServer.getRunningSyncRanges() ⇒ <code>Array.&lt;Object&gt;</code>
-Returns an array of active sync ranges, in the format { start, end }
+Returns an array of active sync ranges
 
 **Kind**: instance method of [<code>DataServer</code>](#DataServer)  
 **Returns**: <code>Array.&lt;Object&gt;</code> - ranges  
@@ -65,6 +56,9 @@ Queries if an active sync exists covering the specified range
 | range | <code>Object</code> | 
 | range.start | <code>number</code> | 
 | range.end | <code>number</code> | 
+| range.exchange | <code>string</code> | 
+| range.symbol | <code>string</code> | 
+| range.tf | <code>string</code> | 
 
 <a name="DataServer+expectSync"></a>
 
@@ -80,6 +74,9 @@ finishes. If no such sync is active, this is a no-op.
 | range | <code>Object</code> | 
 | range.start | <code>number</code> | 
 | range.end | <code>number</code> | 
+| range.exchange | <code>string</code> | 
+| range.symbol | <code>string</code> | 
+| range.tf | <code>string</code> | 
 
 <a name="DataServer+optimizeSyncRange"></a>
 
