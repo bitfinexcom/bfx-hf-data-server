@@ -48,7 +48,7 @@
     "mathjs": "^7.1.0"
   },
   "devDependencies": {
-    "bfx-hf-ext-plugin-bitfinex": "github:bitfinexcom/bfx-hf-ext-plugin-bitfinex#v1.0.9",
+    "bfx-hf-ext-plugin-bitfinex": "github:bitfinexcom/bfx-hf-ext-plugin-bitfinex#v1.0.10",
     "bfx-hf-models-adapter-lowdb": "github:bitfinexcom/bfx-hf-models-adapter-lowdb#v1.0.4",
     "dotenv": "^6.2.0",
     "jsdoc-to-markdown": "^5.0.1",
