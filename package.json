@@ -37,10 +37,10 @@
   ],
   "dependencies": {
     "bfx-api-node-util": "^1.0.9",
-    "bfx-hf-backtest": "github:bitfinexcom/bfx-hf-backtest#v2.0.1",
+    "bfx-hf-backtest": "git+https://github.com/bitfinexcom/bfx-hf-backtest.git#v2.0.2",
     "bfx-hf-indicators": "github:bitfinexcom/bfx-hf-indicators#v2.0.9",
-    "bfx-hf-models": "github:bitfinexcom/bfx-hf-models#v2.3.3",
-    "bfx-hf-strategy": "github:bitfinexcom/bfx-hf-strategy#v1.1.1",
+    "bfx-hf-models": "git+https://github.com/bitfinexcom/bfx-hf-models.git#v2.4.0",
+    "bfx-hf-strategy": "git+https://github.com/bitfinexcom/bfx-hf-strategy.git#v1.1.2",
     "bfx-hf-util": "github:bitfinexcom/bfx-hf-util#v1.0.12",
     "bluebird": "^3.7.2",
     "debug": "^4.3.1",
@@ -48,8 +48,8 @@
     "mathjs": "^7.1.0"
   },
   "devDependencies": {
-    "bfx-hf-ext-plugin-bitfinex": "github:bitfinexcom/bfx-hf-ext-plugin-bitfinex#v1.0.10",
-    "bfx-hf-models-adapter-lowdb": "github:bitfinexcom/bfx-hf-models-adapter-lowdb#v1.0.4",
+    "bfx-hf-ext-plugin-bitfinex": "github:bitfinexcom/bfx-hf-ext-plugin-bitfinex#v1.0.11",
+    "bfx-hf-models-adapter-lowdb": "git+https://github.com/bitfinexcom/bfx-hf-models-adapter-lowdb.git#v1.0.5",
     "dotenv": "^6.2.0",
     "jsdoc-to-markdown": "^5.0.1",
     "mocha": "^6.2.0",
