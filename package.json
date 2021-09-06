@@ -1,6 +1,6 @@
 {
   "name": "bfx-hf-data-server",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "description": "HF data server module",
   "main": "index.js",
   "directories": {
