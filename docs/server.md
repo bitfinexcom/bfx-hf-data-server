@@ -8,7 +8,6 @@
     * [.open()](#DataServer+open)
     * [.close()](#DataServer+close)
     * [.getRunningSyncRanges()](#DataServer+getRunningSyncRanges) ⇒ <code>Array.&lt;Object&gt;</code>
-    * [.isSyncActive(range)](#DataServer+isSyncActive) ⇒ <code>boolean</code>
     * [.expectSync(range)](#DataServer+expectSync) ⇒ <code>Promise</code>
     * [.optimizeSyncRange(range)](#DataServer+optimizeSyncRange) ⇒ <code>Object</code>
     * [.notifySyncStart(args)](#DataServer+notifySyncStart)
@@ -43,23 +42,6 @@ Returns an array of active sync ranges
 
 **Kind**: instance method of [<code>DataServer</code>](#DataServer)  
 **Returns**: <code>Array.&lt;Object&gt;</code> - ranges  
-<a name="DataServer+isSyncActive"></a>
-
-### dataServer.isSyncActive(range) ⇒ <code>boolean</code>
-Queries if an active sync exists covering the specified range
-
-**Kind**: instance method of [<code>DataServer</code>](#DataServer)  
-**Returns**: <code>boolean</code> - isActive  
-
-| Param | Type |
-| --- | --- |
-| range | <code>Object</code> | 
-| range.start | <code>number</code> | 
-| range.end | <code>number</code> | 
-| range.exchange | <code>string</code> | 
-| range.symbol | <code>string</code> | 
-| range.tf | <code>string</code> | 
-
 <a name="DataServer+expectSync"></a>
 
 ### dataServer.expectSync(range) ⇒ <code>Promise</code>
