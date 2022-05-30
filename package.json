@@ -24,7 +24,7 @@
   "scripts": {
     "lint": "standard",
     "test": "npm run lint && npm run unit",
-    "unit": "NODE_ENV=test mocha -R spec -b --recursive",
+    "unit": "NODE_ENV=test mocha -R spec -b --recursive test/unit",
     "start-lowdb": "node examples/server-lowdb.js",
     "server_docs": "node_modules/jsdoc-to-markdown/bin/cli.js lib/server.js > docs/server.md",
     "docs": "npm run server_docs"
@@ -51,6 +51,7 @@
   "devDependencies": {
     "bfx-hf-ext-plugin-bitfinex": "github:bitfinexcom/bfx-hf-ext-plugin-bitfinex#v1.0.11",
     "bfx-hf-models-adapter-lowdb": "git+https://github.com/bitfinexcom/bfx-hf-models-adapter-lowdb.git#v1.0.5",
+    "chai": "^4.3.6",
     "dotenv": "^6.2.0",
     "jsdoc-to-markdown": "^5.0.1",
     "mocha": "^6.2.0",
