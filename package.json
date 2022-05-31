@@ -44,6 +44,7 @@
     "bfx-hf-strategy-perf": "git+https://github.com/bitfinexcom/bfx-hf-strategy-perf.git#v1.1.0",
     "bfx-hf-util": "github:bitfinexcom/bfx-hf-util#v1.0.12",
     "bignumber.js": "^9.0.2",
+    "bintrees": "^1.0.2",
     "debug": "^4.3.1",
     "lodash": "^4.17.10",
     "mathjs": "^7.1.0"

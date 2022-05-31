@@ -9,14 +9,14 @@ describe('Tree', () => {
   const tree = new Tree()
 
   it('inserts data-points', () => {
-    expect(tree.isEmpty()).to.be.true
+    expect(tree.size).to.be.eq(0)
 
     tree.insert({ mts: 10, value: 1 })
     tree.insert({ mts: 10, value: 2 })
     tree.insert({ mts: 20, value: 2 })
     tree.insert({ mts: 5, value: 3 })
 
-    expect(tree.isEmpty()).to.be.false
+    expect(tree.size).to.be.eq(3)
   })
 
   it('retrieve data points ordered by time', () => {
@@ -25,6 +25,6 @@ describe('Tree', () => {
     expect(tree.shift()).to.eql({ mts: 10, value: 2 })
     expect(tree.shift()).to.eql({ mts: 20, value: 2 })
     expect(tree.shift()).to.be.null
-    expect(tree.isEmpty()).to.be.true
+    expect(tree.size).to.be.eq(0)
   })
 })
