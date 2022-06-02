@@ -46,6 +46,7 @@
     "bignumber.js": "^9.0.2",
     "bintrees": "^1.0.2",
     "debug": "^4.3.1",
+    "flat-promise": "^1.0.3",
     "lodash": "^4.17.10",
     "mathjs": "^7.1.0"
   },
