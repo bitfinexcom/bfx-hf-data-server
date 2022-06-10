@@ -46,8 +46,7 @@
     "bfx-hf-util": "github:bitfinexcom/bfx-hf-util#v1.0.12",
     "debug": "^4.3.1",
     "heap": "^0.2.7",
-    "lodash": "^4.17.10",
-    "mathjs": "^7.1.0"
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "bfx-hf-ext-plugin-bitfinex": "github:bitfinexcom/bfx-hf-ext-plugin-bitfinex#v1.0.11",
