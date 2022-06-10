@@ -1,6 +1,6 @@
 {
   "name": "bfx-hf-data-server",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "description": "HF data server module",
   "main": "index.js",
   "directories": {
@@ -40,8 +40,8 @@
     "bfx-api-node-util": "^1.0.9",
     "bfx-hf-backtest": "git+https://github.com/bitfinexcom/bfx-hf-backtest.git#v2.1.1",
     "bfx-hf-indicators": "git+https://github.com/bitfinexcom/bfx-hf-indicators.git#v2.1.1",
-    "bfx-hf-models": "git+https://github.com/bitfinexcom/bfx-hf-models.git#v2.6.0",
-    "bfx-hf-strategy": "git+https://github.com/bitfinexcom/bfx-hf-strategy.git#v1.3.1",
+    "bfx-hf-models": "git+https://github.com/bitfinexcom/bfx-hf-models.git#v3.0.0",
+    "bfx-hf-strategy": "git+https://github.com/bitfinexcom/bfx-hf-strategy.git#v2.0.0",
     "bfx-hf-strategy-perf": "git+https://github.com/bitfinexcom/bfx-hf-strategy-perf.git#v2.0.0",
     "bfx-hf-util": "github:bitfinexcom/bfx-hf-util#v1.0.12",
     "debug": "^4.3.1",
