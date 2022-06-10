@@ -41,7 +41,7 @@
     "bfx-hf-backtest": "git+https://github.com/bitfinexcom/bfx-hf-backtest.git#v2.1.2",
     "bfx-hf-indicators": "git+https://github.com/bitfinexcom/bfx-hf-indicators.git#v2.1.1",
     "bfx-hf-models": "git+https://github.com/bitfinexcom/bfx-hf-models.git#v3.0.0",
-    "bfx-hf-strategy": "git+https://github.com/bitfinexcom/bfx-hf-strategy.git#v1.4.0",
+    "bfx-hf-strategy": "git+https://github.com/avsek477/bfx-hf-strategy.git#generate-strategy-results",
     "bfx-hf-strategy-perf": "git+https://github.com/bitfinexcom/bfx-hf-strategy-perf.git#v2.0.0",
     "bfx-hf-util": "github:bitfinexcom/bfx-hf-util#v1.0.12",
     "debug": "^4.3.1",
