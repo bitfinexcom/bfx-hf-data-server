@@ -38,10 +38,10 @@
   "dependencies": {
     "bfx-api-node-rest": "^4.6.0",
     "bfx-api-node-util": "^1.0.9",
-    "bfx-hf-backtest": "git+https://github.com/bitfinexcom/bfx-hf-backtest.git#v2.2.6",
+    "bfx-hf-backtest": "git+https://github.com/tarcisiozf/bfx-hf-backtest.git#refactor-pnl",
     "bfx-hf-indicators": "git+https://github.com/bitfinexcom/bfx-hf-indicators.git#v2.1.1",
     "bfx-hf-models": "git+https://github.com/bitfinexcom/bfx-hf-models.git#v4.0.0",
-    "bfx-hf-strategy": "git+https://github.com/bitfinexcom/bfx-hf-strategy.git#v1.5.5",
+    "bfx-hf-strategy": "git+https://github.com/tarcisiozf/bfx-hf-strategy.git#refactor-pnl",
     "bfx-hf-strategy-perf": "git+https://github.com/bitfinexcom/bfx-hf-strategy-perf.git#v2.0.0",
     "bfx-hf-util": "git+https://github.com/bitfinexcom/bfx-hf-util#v1.0.12",
     "debug": "^4.3.1",
