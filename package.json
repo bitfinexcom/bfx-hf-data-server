@@ -38,7 +38,7 @@
   "dependencies": {
     "bfx-api-node-rest": "^4.6.0",
     "bfx-api-node-util": "^1.0.9",
-    "bfx-hf-backtest": "git+https://github.com/bitfinexcom/bfx-hf-backtest.git#v2.3.2",
+    "bfx-hf-backtest": "git+https://github.com/arifjmamun/bfx-hf-backtest.git#progress",
     "bfx-hf-indicators": "git+https://github.com/bitfinexcom/bfx-hf-indicators.git#v2.1.1",
     "bfx-hf-models": "git+https://github.com/bitfinexcom/bfx-hf-models.git#v4.0.0",
     "bfx-hf-strategy": "git+https://github.com/bitfinexcom/bfx-hf-strategy.git#v2.1.1",
