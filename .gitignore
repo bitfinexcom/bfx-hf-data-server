@@ -12,3 +12,5 @@ scripts/*
 !db/.keep
 db/*
 package-lock.json
+
+test-db.json

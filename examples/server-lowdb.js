@@ -23,6 +23,7 @@ const db = new HFDB({
 })
 
 const ds = new DataServer({
+  rest_base_url: 'http://localhost:3001/bitfinex',
   port: 8899,
   db
 })
