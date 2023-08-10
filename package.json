@@ -44,6 +44,7 @@
     "bfx-hf-strategy": "git+https://github.com/bitfinexcom/bfx-hf-strategy.git#v2.1.2",
     "bfx-hf-strategy-perf": "git+https://github.com/bitfinexcom/bfx-hf-strategy-perf.git#v3.0.1",
     "bfx-hf-util": "git+https://github.com/bitfinexcom/bfx-hf-util#v1.0.12",
+    "bfx-facs-db-sqlite": "git+https://github.com/bitfinexcom/bfx-facs-db-sqlite.git",
     "debug": "^4.3.1",
     "heap": "^0.2.7",
     "lodash": "^4.17.10"
