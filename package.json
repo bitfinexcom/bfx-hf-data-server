@@ -38,13 +38,13 @@
   "dependencies": {
     "bfx-api-node-rest": "^4.6.0",
     "bfx-api-node-util": "^1.0.9",
+    "bfx-facs-db-sqlite": "git+https://github.com/bitfinexcom/bfx-facs-db-sqlite.git",
     "bfx-hf-backtest": "git+https://github.com/bitfinexcom/bfx-hf-backtest.git#v2.4.1",
     "bfx-hf-indicators": "git+https://github.com/bitfinexcom/bfx-hf-indicators.git#v2.2.0",
     "bfx-hf-models": "git+https://github.com/bitfinexcom/bfx-hf-models.git#v4.0.0",
     "bfx-hf-strategy": "git+https://github.com/bitfinexcom/bfx-hf-strategy.git#v2.1.2",
     "bfx-hf-strategy-perf": "git+https://github.com/bitfinexcom/bfx-hf-strategy-perf.git#v3.0.1",
     "bfx-hf-util": "git+https://github.com/bitfinexcom/bfx-hf-util#v1.0.12",
-    "bfx-facs-db-sqlite": "git+https://github.com/bitfinexcom/bfx-facs-db-sqlite.git",
     "debug": "^4.3.1",
     "heap": "^0.2.7",
     "lodash": "^4.17.10"
@@ -58,6 +58,7 @@
     "mocha": "^6.2.0",
     "sinon": "^14.0.0",
     "standard": "^14.2.0",
-    "ws": "^8.2.1"
+    "ws": "^8.2.1",
+    "proxyquire": "^2.1.3"
   }
 }
