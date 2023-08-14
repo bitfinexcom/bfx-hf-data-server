@@ -27,7 +27,7 @@ describe('Sqlite DB', () => {
 
   describe('#createData', () => {
     it('adds new entry in bt_history table', async () => {
-      const createQuery = 'insert into bt_history (exchange, strategyId, start, end, symbol, timeframe, includeCandles, includeTrades, candleSeed, sync, meta, capitalAllocation, stopLossPerc, maxDrawdownPerc, isFavorite, timestamp) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'
+      const createQuery = 'insert into bt_history (exchange, strategyId, start, end, symbol, timeframe, includeCandles, includeTrades, candleSeed, sync, executionId, capitalAllocation, stopLossPerc, maxDrawdownPerc, isFavorite, timestamp) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'
       await sqliteDb.createData(createQuery, testBtValues)
       const getQuery = 'SELECT * FROM bt_history'
       const data = await sqliteDb.queryData(getQuery)

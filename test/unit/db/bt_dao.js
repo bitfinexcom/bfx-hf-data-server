@@ -17,7 +17,7 @@ const testBt = {
   includeTrades: false,
   candleSeed: 10,
   sync: true,
-  meta: 'd80adf68-f672-4f78-a111-5d72585a2c43',
+  executionId: 'd80adf68-f672-4f78-a111-5d72585a2c43',
   capitalAllocation: 13,
   stopLossPerc: 56,
   maxDrawdownPerc: 76,
@@ -70,20 +70,19 @@ describe('Backtest DAO', () => {
 
   describe('#getBtData', () => {
     it('gets backtest data by id', async () => {
-      const strategyId = '123456'
-      const id = 1
-      const data = await btDao.getBtData(id)
+      const executionId = testBt.executionId
+      const data = await btDao.getBtData(executionId)
       expect(data).to.be.an('object')
-      expect(data.strategyId).to.be.equal(strategyId)
+      expect(data.strategyId).to.be.equal(testBt.strategyId)
       expect(getDataStub.calledOnce).to.be.true
     })
   })
 
   describe('#setBtFavorite', () => {
     it('sets backtest as favorite', async () => {
-      const id = 1
+      const executionId = testBt.executionId
       const isFavorite = 1
-      await btDao.setBtFavorite(id, isFavorite)
+      await btDao.setBtFavorite(executionId, isFavorite)
       expect(executeQueryStub.calledOnce).to.be.true
     })
   })
