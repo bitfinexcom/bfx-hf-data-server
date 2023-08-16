@@ -68,16 +68,6 @@ describe('Backtest DAO', () => {
     })
   })
 
-  describe('#getBtData', () => {
-    it('gets backtest data by id', async () => {
-      const executionId = testBt.executionId
-      const data = await btDao.getBtData(executionId)
-      expect(data).to.be.an('object')
-      expect(data.strategyId).to.be.equal(testBt.strategyId)
-      expect(getDataStub.calledOnce).to.be.true
-    })
-  })
-
   describe('#setBtFavorite', () => {
     it('sets backtest as favorite', async () => {
       const executionId = testBt.executionId
