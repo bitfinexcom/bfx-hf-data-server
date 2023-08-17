@@ -53,7 +53,9 @@ describe('Backtest DAO', () => {
         '5m', true, false, 10, true, {}, 'd80adf68-f672-4f78-a111-5d72585a2c43',
         { capitalAllocation: 13, stopLossPerc: 56, maxDrawdownPerc: 76 }
       ]
-      await btDao.saveBt(args)
+      const savedBt = await btDao.saveBt(args, {})
+      expect(savedBt).to.be.an('object')
+      expect(savedBt.strategyId).to.be.equal('123456')
       expect(createDataStub.calledOnce).to.be.true
     })
   })
