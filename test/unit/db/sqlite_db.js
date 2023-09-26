@@ -9,7 +9,8 @@ const sqliteDb = require('../../../lib/db/sqlite_db')
 
 const testSqlitePath = `${os.homedir()}/.bitfinexhoney/testsqlite`
 const testBtValues = ['bitfinex', '123456', 1691491641045, 1691577141045, 'TESTBTC:TESTUSDT', '5m',
-  true, false, 10, true, 'd80adf68-f672-4f78-a111-5d72585a2c43', 13, 56, 76, 0, Date.now()]
+  true, false, 10, true, false, 'd80adf68-f672-4f78-a111-5d72585a2c43', 13, 56, 76,
+  false, false, 0, false, 0, 0, Date.now()]
 
 describe('Sqlite DB', () => {
   before(async () => {
@@ -27,7 +28,7 @@ describe('Sqlite DB', () => {
 
   describe('#createData', () => {
     it('adds new entry in bt_history table', async () => {
-      const createQuery = 'insert into bt_history (exchange, strategyId, start, end, symbol, timeframe, includeCandles, includeTrades, candleSeed, sync, executionId, capitalAllocation, stopLossPerc, maxDrawdownPerc, isFavorite, timestamp) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'
+      const createQuery = 'insert into bt_history (exchange, strategyId, start, end, symbol, timeframe, includeCandles, includeTrades, candleSeed, sync, margin, executionId, capitalAllocation, stopLossPerc, maxDrawdownPerc, useMaxLeverage, increaseLeverage, leverage, addStopOrder, stopOrderPercent, isFavorite, timestamp, btResult) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'
       await sqliteDb.createData(createQuery, testBtValues)
       const getQuery = 'SELECT * FROM bt_history'
       const data = await sqliteDb.queryData(getQuery)

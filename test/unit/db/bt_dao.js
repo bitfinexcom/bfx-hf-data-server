@@ -50,8 +50,10 @@ describe('Backtest DAO', () => {
     it('save backtest', async () => {
       const args = [
         'bitfinex', '123456', 1691491641045, 1691577141045, 'TESTBTC:TESTUSD',
-        '5m', true, false, 10, true, {}, 'd80adf68-f672-4f78-a111-5d72585a2c43',
-        { capitalAllocation: 13, stopLossPerc: 56, maxDrawdownPerc: 76 }
+        '5m', true, false, 10, true, false, {}, 'd80adf68-f672-4f78-a111-5d72585a2c43',
+        { capitalAllocation: 13, stopLossPerc: 56, maxDrawdownPerc: 76 },
+        { useMaxLeverage: false, increaseLeverage: false, leverage: 0 },
+        { addStopOrder: false, stopOrderPercent: 0 }
       ]
       const savedBt = await btDao.saveBt(args, {})
       expect(savedBt).to.be.an('object')
